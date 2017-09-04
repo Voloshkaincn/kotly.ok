@@ -341,8 +341,9 @@ $(document).ready(function(){
         $(".main-menu-mobil-button").toggleClass("active");
         $(".main-nav").toggle();
 
-        $(".main-menu-item_has-children").click(function () {
-            $(this).find(".main-menu-subitem").toggle();
+        $(".main-menu-item_has-children > a").click(function () {
+            $(this).parent().find(".main-menu-subitem").toggle();
+            return false;
         });
     });
     $(".quick-search-mobil-button").click(function () {
