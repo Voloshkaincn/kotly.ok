@@ -1,0 +1,28 @@
+From 294ee23367ec13405f8b1e90f64f7fde8d5ab1fd Mon Sep 17 00:00:00 2001
+From: voloshkaincn <barvinok.cn@gmail.com>
+Date: Mon, 4 Sep 2017 12:04:58 +0300
+Subject: [PATCH] fixed mobile menu
+
+---
+ js/common.js | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/js/common.js b/js/common.js
+index 0825ec2..e203454 100644
+--- a/js/common.js
++++ b/js/common.js
+@@ -341,8 +341,9 @@ $(document).ready(function(){
+         $(".main-menu-mobil-button").toggleClass("active");
+         $(".main-nav").toggle();
+ 
+-        $(".main-menu-item_has-children").click(function () {
+-            $(this).find(".main-menu-subitem").toggle();
++        $(".main-menu-item_has-children > a").click(function () {
++            $(this).parent().find(".main-menu-subitem").toggle();
++            return false;
+         });
+     });
+     $(".quick-search-mobil-button").click(function () {
+-- 
+2.14.1.windows.1
+
