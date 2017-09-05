@@ -152,7 +152,7 @@ for ($i=1; $i<=5; $i++):
                                     <div class="inset__discount">-10%</div>
                                 </div>
                                 <div class="inset_info">
-                                    <a class="link" href="single-product.php">Твердотельный котел КГ-18</a>
+                                    <a class="link" href="single-product.php">Твердотельный котел КГ-18 Твердотельный котел КГ-18</a>
                                     <div class="inset__description">Универсальные твердотопливные водонагревательные стальные котлы типа KG с горизонтальными конвекц..</div>
                                     <div class="inset__availability-price">
                                         <div class="present present_available">в наличии</div>

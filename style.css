@@ -814,7 +814,10 @@ button:active {
     line-height: 22px;
     font-size: 16px;
     color: #2982bf;
-    text-decoration: underline;
+    text-decoration: underline;   
+    max-height: 43px;
+    overflow: hidden;
+    word-break: break-all
 }
 .product-card-grid .outset .inset .link:hover,
 .product-card-grid .outset .inset .link:visited,
@@ -959,15 +962,18 @@ button:active {
     font-size: 14px;
     font-weight: 300;
     color: #ffad14;
+    margin-bottom: 3px;
 }
 .inset__availability-price .prev-price {
     color: #999;
     text-decoration: line-through;
+    height: 23px;
 }
 .inset__availability-price .price {
     font-size: 24px;
     font-weight: bold;
     color: #f04911;
+    height: 23px;
 }
 
 /*----------action-button----------*/
@@ -1631,6 +1637,12 @@ button:active {
     height: 465px;
     word-spacing: normal;
 }
+.catalog-products.count-4 .product-card-grid {
+    width: 25%; /* 4 items per row */
+}
+.catalog-products.count-5 .product-card-grid {
+    width: 20%; /* 4 items per row */
+} 
 .catalog-products .product-card-grid .outset {
     border-top: 1px solid #e6e6e6;
 }
@@ -2821,7 +2833,7 @@ div.aligncenter {
         width: 1024px
     }
     main {
-        overflow-x: hidden;
+        overflow: hidden;
     }
     .site-header {
         height: 45px;
@@ -3250,7 +3262,7 @@ div.aligncenter {
         width: 22%;
         position: absolute;
         right: 0;
-        top: 100px;
+        top: 110px;
     }
     .product-card-list .action-button_add-to-cart {
         width: 125px;

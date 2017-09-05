@@ -22,8 +22,8 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: true,
         dotsClass: 'nav-dots',
-        autoplay: true,
-        autoplaySpeed: 3000,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>',
         responsive: [
@@ -50,8 +50,8 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: true,
         dotsClass: 'nav-dots',
-        autoplay: true,
-        autoplaySpeed: 3000,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>',
         responsive: [
