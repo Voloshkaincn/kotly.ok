@@ -227,7 +227,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="catalog-products">
+
+                        <div class="catalog-products count-3">
 
 <?php
      for ($i=1; $i<=12; $i++):
