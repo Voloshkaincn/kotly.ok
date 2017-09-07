@@ -1,0 +1,79 @@
+From 7c9c0ef7c59d187872597a8aa0a936f60d2cf4a4 Mon Sep 17 00:00:00 2001
+From: voloshkaincn <barvinok.cn@gmail.com>
+Date: Wed, 6 Sep 2017 00:14:13 +0300
+Subject: [PATCH] fix catalog: number of colomns
+
+---
+ catalog.php |  3 ++-
+ style.css   | 34 ++++++++++++++++++++++++++--------
+ 2 files changed, 28 insertions(+), 9 deletions(-)
+
+diff --git a/catalog.php b/catalog.php
+index 83d4d99..0081e38 100644
+--- a/catalog.php
++++ b/catalog.php
+@@ -227,7 +227,8 @@
+                                 </div>
+                             </div>
+                         </div>
+-                        <div class="catalog-products">
++
++                        <div class="catalog-products count-3">
+ 
+ <?php
+      for ($i=1; $i<=12; $i++):
+diff --git a/style.css b/style.css
+index 636280d..609502a 100644
+--- a/style.css
++++ b/style.css
+@@ -1637,12 +1637,6 @@ button:active {
+     height: 465px;
+     word-spacing: normal;
+ }
+-.catalog-products.count-4 .product-card-grid {
+-    width: 25%; /* 4 items per row */
+-}
+-.catalog-products.count-5 .product-card-grid {
+-    width: 20%; /* 4 items per row */
+-} 
+ .catalog-products .product-card-grid .outset {
+     border-top: 1px solid #e6e6e6;
+ }
+@@ -1654,8 +1648,32 @@ button:active {
+ .catalog-products .product-card-grid .inset {
+     border-left: 1px solid #e6e6e6;
+ }
+-.catalog-products .product-card-grid:nth-of-type(3n + 1) .inset {
+-    border-left: 1px transparent;
++@media (min-width: 1200px) {
++    .catalog-products.count-3 .product-card-grid {
++        width: 33.33333%; /* 3 items per row */
++    }
++    .catalog-products.count-4 .product-card-grid {
++        width: 25%; /* 4 items per row */
++    }
++    .catalog-products.count-5 .product-card-grid {
++        width: 20%; /* 5 items per row */
++    } 
++    .catalog-products.count-3 .product-card-grid:nth-of-type(3n + 1) .inset {
++        border-left: 1px transparent;
++    }
++    .catalog-products.count-4 .product-card-grid:nth-of-type(4n + 1) .inset {
++        border-left: 1px transparent;
++    }
++    .catalog-products.count-4 .product-card-grid:nth-child(4) .outset{
++        border-top: 1px transparent;
++    }
++    .catalog-products.count-5 .product-card-grid:nth-of-type(5n + 1) .inset {
++        border-left: 1px transparent;
++    }
++    .catalog-products.count-5 .product-card-grid:nth-child(4) .outset,
++    .catalog-products.count-5 .product-card-grid:nth-child(5) .outset{
++        border-top: 1px transparent;
++    }
+ }
+ .catalog-products .product-card-grid:nth-of-type(3n + 3) .inset {
+     border-right: 1px transparent;
+-- 
+2.14.1.windows.1
+
