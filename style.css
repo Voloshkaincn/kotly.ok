@@ -629,6 +629,9 @@ button:active {
 .content .sidebar + .content-cell {
     margin-left: 30px;
 }
+.content-cell {
+    width: 100%;
+}
 
 /*----------categories-menu---------- */
 .categories-menu {
@@ -1741,6 +1744,10 @@ button:active {
 /*----------sidebar banner---------*/
 .sidebar-banner {
     position: relative;
+    max-width: 215px;
+}
+.sidebar-banner img {
+    width: 100%;
 }
 .sidebar-banner .link {
     position: absolute;
